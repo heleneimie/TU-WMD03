@@ -1,0 +1,23 @@
+{
+  "name": "tu-wmd03",
+  "version": "1.0.0",
+  "description": "Tests unitaires - WMD03",
+  "main": "index-spec.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heleneimie/TU-WMD03.git"
+  },
+  "author": "Hélène Gaillard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heleneimie/TU-WMD03/issues"
+  },
+  "homepage": "https://github.com/heleneimie/TU-WMD03#readme",
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "mocha": "^5.1.1"
+  }
+}
