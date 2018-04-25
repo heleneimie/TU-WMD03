@@ -1,4 +1,5 @@
-##Installation
+## Installation
+
 Cloner le projet : https://github.com/heleneimie/TU-WMD03.git
 
 Se déplacer dans le projet : _cd TU-WMD03_
@@ -26,5 +27,6 @@ describe('Array', function() {
 }); 
 ```
 
-##Exécution des tests
+## Exécution des tests
+
 Exécuter la commande : _./node_modules/.bin/mocha_
