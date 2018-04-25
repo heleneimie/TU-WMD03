@@ -1,10 +1,11 @@
-##Installation
+## Installation
+
 Cloner le projet : https://github.com/heleneimie/TU-WMD03.git
 
 Se déplacer dans le projet : _cd TU-WMD03_
 
 Initialiser NodeJS : _npm init_
-Installer le framework de test Mocha (environnement dev) : _npm install mocha -D_
+Installer le framework de test Mocha (environnement dev) : _npm install mocha -D_ ; (de manière globale) : _npm install mocha -D -g_
 Installer le module Assert (environnement dev) -> permet de tester l'égalité des champs : _npm install assert -D_
 
 1 - A la racine, créer un dossier test.
@@ -26,5 +27,17 @@ describe('Array', function() {
 }); 
 ```
 
-##Exécution des tests
-Exécuter la commande : _./node_modules/.bin/mocha_
+## Exécution des tests
+
+Exécuter la commande : _./node_modules/.bin/mocha_ ou _mocha_ si le plugin a été installé de manière globale.
+
+Commande qui permet de lire les fichiers enfants du fichier qu'on va tester : _./node_modules/.bin/mocha --recursive_ 
+ou _mocha --recursive_ si le plugin a été installé de manière globale.
+
+Possibilité d'ajouter la commande directement dans package.json dans :
+
+```
+"scripts": {
+    "test": "mocha --recursive"
+}
+```
