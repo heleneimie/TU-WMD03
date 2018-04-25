@@ -11,16 +11,16 @@ describe('Array', function() {
     describe('#indexOf()', function() {
 
         /* s'exécute avant toutes les itérations, 1 seule fois */
-        before( function() console.log("Before") )
+        before( function() { console.log("Before") });
 
         /* s'exécute avant chaque itération */
-        beforeEach( function() console.log("Before each") )
+        beforeEach( function() { console.log("Before each")  });
 
         /* s'exécute après chaque itération */
-        afterEach( function() console.log("After each") )
+        afterEach( function() { console.log("After each")  });
 
         /* s'exécute après toutes les itérations, 1 seule fois */
-        after( function() console.log("After") )
+        after( function() { console.log("After")  });
 
         /* Permet de faire l'itération de notre test unitaire.
          * 1er param : Description de ce que doit faire la fonction. 2e param = callback.
@@ -30,6 +30,6 @@ describe('Array', function() {
         });
         it('vérifier que la variable b === 2', function() {
 
-        })
-    })
-})
+        });
+    });
+});

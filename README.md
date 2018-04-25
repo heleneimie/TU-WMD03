@@ -12,6 +12,7 @@ Installer le module Assert (environnement dev) -> permet de tester l'égalité d
 2 - Ajouter un fichier index-spec.js dans le dossier test.
 
 Documentation de Mocha : https://mochajs.org/#getting-started
+Documentation de Assert : https://www.npmjs.com/package/assert
 
 3 - Dans le fichier index-spec.js, ajouter les tests (_ex. documentation ci-dessous_) :
 
@@ -34,10 +35,11 @@ Exécuter la commande : _./node_modules/.bin/mocha_ ou _mocha_ si le plugin a é
 Commande qui permet de lire les fichiers enfants du fichier qu'on va tester : _./node_modules/.bin/mocha --recursive_ 
 ou _mocha --recursive_ si le plugin a été installé de manière globale.
 
-Possibilité d'ajouter la commande directement dans package.json dans :
+Possibilité de simplifier la commande en l'ajoutant directement dans package.json dans :
 
 ```
 "scripts": {
     "test": "mocha --recursive"
 }
 ```
+Maintenant on peut lancer les tests en exécutant la commande : **_npm test_**
