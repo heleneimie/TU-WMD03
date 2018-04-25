@@ -12,7 +12,7 @@ describe('SampleService', function () {
      */
     describe('#add', function () {
 
-        it('Vérifier que la méthode retourne 2 avec en paramètres 1 et 1', function () {
+        it("Vérifier que la méthode retourne 2 avec en paramètres 1 et 1", function () {
 
             // Arrange (je définis mon contexte)
             const a = 1;
@@ -28,7 +28,7 @@ describe('SampleService', function () {
 
         });
 
-        it('Vérifie que la méthode retourne 3, avec en paramètres 2 et 1', function () {
+        it("Vérifie que la méthode retourne 3, avec en paramètres 2 et 1", function () {
 
             // Arrange
             const a = 2;
@@ -56,7 +56,7 @@ describe('SampleService', function () {
             sampleService = new SampleService();
         });
 
-        it('Vérifie que ça retourne true si le paramètre est 18', function () {
+        it("Vérifie que ça retourne true si le paramètre est 18", function () {
 
             //Arrange
             const age = 18;
@@ -69,7 +69,7 @@ describe('SampleService', function () {
             assert.equal(result, true);
 
         });
-        it('Vérifie que ça retourne false si le paramètre est 17', function () {
+        it("Vérifie que ça retourne false si le paramètre est 17", function () {
 
             //Arrange
             const age = 17;
@@ -85,4 +85,68 @@ describe('SampleService', function () {
         });
     });
 
+    /**
+     * Exécute la fonction displayName du fichier de tests
+     */
+    describe('#displayName', function () {
+
+        let sampleService;
+
+        beforeEach(function () {
+            sampleService = new SampleService();
+        });
+
+        it("Vérifie que le prénom et le nom ont été saisis", function () {
+
+            //Arrange
+            const firstname = 'Hélène';
+            const lastname = 'Gaillard';
+
+            //Act
+            const result = sampleService.displayName(firstname, lastname);
+
+            //Assert
+            assert.strictEqual(result, "Hélène Gaillard");
+            // assert.ok(result, indexOf(' ') > -1);
+
+        });
+
+        it("Vérifie quand le prénom est vide", function () {
+
+            //Arrange
+            const firstname = '';
+            const lastname = 'Gaillard';
+
+            //Act
+            const result = sampleService.displayName(firstname, lastname);
+
+            //Assert
+            assert.strictEqual(result, null);
+
+        });
+        it("Vérifie quand le nom est vide", function () {
+            //Arrange
+            const firstname = 'Hélène';
+            const lastname = '';
+
+            //Act
+            const result = sampleService.displayName(firstname, lastname);
+
+            //Assert
+            assert.strictEqual(result, null);
+
+        });
+        it("Vérifie quand le prénom et le nom sont vides", function () {
+            //Arrange
+            const firstname = '';
+            const lastname = '';
+
+            //Act
+            const result = sampleService.displayName(firstname, lastname);
+
+            //Assert
+            assert.strictEqual(result, null);
+
+        });
+    });
 });
